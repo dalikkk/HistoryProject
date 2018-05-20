@@ -6,6 +6,15 @@
 \usepackage{lipsum}
 \usepackage[margin=.5in]{geometry}
 
+\usepackage[utf8]{inputenc}
+\usepackage[TS1,T1]{fontenc}
+%\usepackage{fourier, heuristica}
+\usepackage{array, booktabs}
+\usepackage{graphicx}
+\usepackage[x11names,table]{xcolor}
+\usepackage{caption}
+\DeclareCaptionFont{blue}{\color{LightSteelBlue3}}
+
 \usepackage{caption}
 %\renewcommand{\thetable}{}
 %\setarticletemplate{caption}{\raggedright\insertcaption\par}
@@ -39,7 +48,26 @@
 \end{minipage}
 \hspace{0.5cm}
 \begin{minipage}[t]{0.25\linewidth}
-	\lipsum[1]
+
+\renewcommand\arraystretch{1.4}\arrayrulecolor{LightSteelBlue3}
+\captionsetup{singlelinecheck=false, font=blue, labelfont=sc, labelsep=quad}
+\captionof*{table}{Časová osa}\vskip -1.5ex
+%\caption{Timeline}\vskip -1.5ex
+\begin{tabular}{@{\,}r <{\hskip 2pt} !{\foo} >{\raggedright\arraybackslash}p{5cm}}
+\toprule
+\addlinespace[1.5ex]
+1947 & AT and T Bell Labs develop the idea of cellular phones\\
+1968 & Xerox Palo Alto Research Centre envisage the 'Dynabook\\
+1971 & Busicom 'Handy-LE' Calculator\\
+1973 & First mobile handset invented by Martin Cooper\\
+1978 & Parker Bros. Merlin Computer Toy\\
+1981 & Osborne 1 Portable Computer\\
+1982 & Grid Compass 1100 Clamshell Laptop\\
+1983 & TRS-80 Model 100 Portable PC\\
+1984 & Psion Organiser Handheld Computer\\
+1991 & Psion Series 3 Minicomputer\\
+\end{tabular}
+
 \end{minipage}
 \end{minipage}
 \end{landscape}
