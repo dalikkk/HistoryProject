@@ -1,0 +1,46 @@
+\documentclass[a3 paper]{article}
+%\usepackage[textwidth=8cm,textheight=5cm]{geometry}
+\usepackage{paracol}
+\usepackage{pdflscape}
+\usepackage{kantlipsum}
+\usepackage{lipsum}
+\usepackage[margin=.5in]{geometry}
+
+\usepackage{caption}
+%\renewcommand{\thetable}{}
+%\setarticletemplate{caption}{\raggedright\insertcaption\par}
+
+\newcommand{\foo}{\color{LightSteelBlue3}\makebox[0pt]{\textbullet}\hskip-0.5pt\vrule width 1pt\hspace{\labelsep}}
+
+\title{Rakousko v~letech 1945~--~1985}
+\author{Dalibor Kramář}
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\makeatother
+
+\begin{document}
+\pagestyle{empty}
+\begin{landscape}
+\begin{center}
+	{\fontsize{1cm}{1cm} \selectfont \textbf{\thetitle}}
+\end{center}
+\begin{minipage}[c]{\linewidth}
+\centering
+\begin{minipage}[t]{0.2\linewidth}
+	\section*{Mezinárodní instituce v~Rakousku}
+	\lipsum[1]
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}[t]{0.5\linewidth}
+	\subsection*{Rakouko v~letech 1945~--~1955}
+	\lipsum[2]
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}[t]{0.25\linewidth}
+	\lipsum[1]
+\end{minipage}
+\end{minipage}
+\end{landscape}
+\end{document}
